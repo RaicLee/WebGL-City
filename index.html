@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>과제6</title>
+        <script type="text/javascript" src="three.min.js"></script>
+        <script type="text/javascript" src="OrbitControls.js"></script>
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+        
+        <script id="vertexShader" type="x-shader/x-vertex">
+            void main() {
+                gl_Position = projectionMatrix * modelViewMatrix  * vec4(position,1.0);
+            }
+        </script>
+        <script id="fragmentShader" type="x-shader/x-fragment"">
+            void main() {
+               gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0); // R, G, B, A
+            }
+        </script> 
+        
+
+        <script type="text/javascript" src="demo.js"></script>
+        
+    </head>
+
+</html>
